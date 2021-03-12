@@ -76,7 +76,7 @@ void DisplayInputNode()
 
 void DisplayFinalRoute(std::vector<int>  visited_node_order,std::vector<int> &node_names, const std::string& minimum){
     
-    const int kmultipler = 3;
+    //const int kmultipler = 3;
 
     int window_size = 1500;
     int first_node_x , first_node_y, other_node_x, other_node_y, temp_x, temp_y;
@@ -116,8 +116,8 @@ void DisplayFinalRoute(std::vector<int>  visited_node_order,std::vector<int> &no
       visited_node_order.pop_back();
      
              //randomly assigning x value of node
-      other_node_x = temp*kmultipler*(lower_limit + ( std::rand() % ( upper_limit - lower_limit + 1 ) ));     
-      other_node_y = temp*kmultipler*(lower_limit + ( std::rand() % ( upper_limit - lower_limit + 1 ) ));
+      other_node_x = temp*(lower_limit + ( std::rand() % ( upper_limit - lower_limit + 1 ) ));     
+      other_node_y = temp*(lower_limit + ( std::rand() % ( upper_limit - lower_limit + 1 ) ));
      
           //assigning different red color everytime
       red   = std::min(255, (int)(255 * abs((float(window_size)-other_node_x) / window_size)));          
